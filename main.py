@@ -5,9 +5,8 @@ app = FastAPI()
 def welcome():
     return "hello"
 
-@app.get("/Welcome")
-def Greeting():
-    return "Welcome Again"
+
+
 
 @app.get("/S")
 def Default(Name:str):
@@ -25,3 +24,7 @@ async def getName(age:str):
 
 
     return result
+@app.patch("/Updation")
+async def Update(phone_number:str,Name: str):
+    result = await database.Details.update_one({"Phone_number":phone_number},{"$set":{"Name":Name}})
+    return result.modified_count
