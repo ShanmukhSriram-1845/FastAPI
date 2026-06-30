@@ -1,10 +1,16 @@
-Run command : uvicorn main:app --reload (Terminal)
+Run command : uvicorn main:app --reload 
 python -m uvicorn main:app --reload (PowerShell)
 
 For Mongo DB installation : pip install motor
 For  Mongo Db import : motor.motor_asyncio import AsyncIOMotorClient
 
-"await" ket was used for database connection
+"await" key was used for database connection
 
 "async" method is perform the process through highest criteria and execute the two tasks simulatenously
 "Sync" method is perform the process step by step only
+
+For get method we use "find" and "find_one" commnands
+For Post method we use "insert_one" command
+For Put and Patch we use "update_one" command
+
+After updated the changes, if we count the updations use "Modified_count" command.
