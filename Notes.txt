@@ -12,5 +12,5 @@ For  Mongo Db import : motor.motor_asyncio import AsyncIOMotorClient
 For get method we use "find" and "find_one" commnands
 For Post method we use "insert_one" and "insert_many" commands
 For Put and Patch we use "update_one" and "Update_many" commands
-hi varma
+
 After updated the changes, if we count the updations use "Modified_count" command.
