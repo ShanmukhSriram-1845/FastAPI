@@ -23,8 +23,6 @@ public class E2E_Testcase_01 {
         driver.findElement(By.name("FirstName")).sendKeys("Tennyson");
 		driver.findElement(By.name("LastName")).sendKeys("Benziman");
 		driver.findElement(By.name("Email")).sendKeys("Sr@gmail.com");
-		driver.findElement(By.name("Password")).sendKeys("Shannu@123");
-		driver.findElement(By.name("ConfirmPassword")).sendKeys("Shannu@123");
 		
 		driver.findElement(By.xpath("//button[normalize-space()='Register']")).click();
 		
