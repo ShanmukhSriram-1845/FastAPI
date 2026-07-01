@@ -1,0 +1,37 @@
+package src;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class E2E_Testcase_01 {
+
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver driver = new ChromeDriver();
+		driver.get(" https://demo.nopcommerce.com/");
+		driver.manage().window().maximize();
+		
+		driver.findElement(By.linkText("Register")).click();
+        Thread.sleep(5000);
+        
+        driver.findElement(By.cssSelector("input#gender-male")).click();
+        
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        
+        driver.findElement(By.name("FirstName")).sendKeys("Tennyson");
+		driver.findElement(By.name("LastName")).sendKeys("Benziman");
+		driver.findElement(By.name("Email")).sendKeys("Sr@gmail.com");
+		driver.findElement(By.name("Password")).sendKeys("Shannu@123");
+		driver.findElement(By.name("ConfirmPassword")).sendKeys("Shannu@123");
+		
+		driver.findElement(By.xpath("//button[normalize-space()='Register']")).click();
+		
+		Thread.sleep(5000);
+		driver.findElement(By.linkText("Log out")).click();
+		System.out.println("Registration successful");
+  
+	}
+
+}
